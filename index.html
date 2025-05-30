@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dog Training Center</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     * {
@@ -22,7 +23,7 @@
 
     header {
       background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       padding: 10px 20px;
       position: sticky;
       top: 0;
@@ -75,7 +76,7 @@
       padding: 25px;
       margin-bottom: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
     .section h2 {
@@ -99,9 +100,17 @@
       transition: 0.3s ease;
     }
 
-    .btn.purple { background-color: #6a11cb; }
-    .btn.green { background-color: #00c897; }
-    .btn.orange { background-color: #f57c00; }
+    .btn.purple {
+      background-color: #6a11cb;
+    }
+
+    .btn.green {
+      background-color: #00c897;
+    }
+
+    .btn.orange {
+      background-color: #f57c00;
+    }
 
     .btn:hover {
       opacity: 0.9;
@@ -144,6 +153,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
@@ -168,7 +178,8 @@
 
     <div class="section">
       <h2>Start with Basic Commands</h2>
-      <p>Begin with easy commands like <strong>sit</strong>, <strong>stay</strong>, and <strong>come</strong>. Use treats and consistent praise.</p>
+      <p>Begin with easy commands like <strong>sit</strong>, <strong>stay</strong>, and <strong>come</strong>. Use
+        treats and consistent praise.</p>
     </div>
 
     <div class="section">
@@ -200,11 +211,118 @@
   </footer>
 
 </body>
-  <script type="module">
-      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-      Chatbot.init({
-          chatflowid: "ee65d071-fb49-4f8d-9399-fad54ae59a37",
-          apiHost: "http://localhost:3000",
-      })
-  </script>
+<script type="module">
+  import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+  Chatbot.init({
+    chatflowid: "ee65d071-fb49-4f8d-9399-fad54ae59a37",
+    apiHost: "http://localhost:3000",
+  })
+</script>
+<script type="module">
+  import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+  Chatbot.init({
+    chatflowid: "ee65d071-fb49-4f8d-9399-fad54ae59a37",
+    apiHost: "http://localhost:3000",
+    chatflowConfig: {
+      /* Chatflow Config */
+    },
+    observersConfig: {
+      /* Observers Config */
+    },
+    theme: {
+      button: {
+        backgroundColor: '#3B81F6',
+        right: 20,
+        bottom: 20,
+        size: 48,
+        dragAndDrop: true,
+        iconColor: 'white',
+        customIconSrc: 'https://avatar.iran.liara.run/public/11',
+        autoWindowOpen: {
+          autoOpen: true,
+          openDelay: 2,
+          autoOpenOnMobile: false
+        }
+      },
+      tooltip: {
+        showTooltip: true,
+        tooltipMessage: 'Hi There 👋!',
+        tooltipBackgroundColor: 'black',
+        tooltipTextColor: 'white',
+        tooltipFontSize: 16
+      },
+      disclaimer: {
+        title: 'Disclaimer',
+        message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
+        textColor: 'black',
+        buttonColor: '#3b82f6',
+        buttonText: 'Start Chatting',
+        buttonTextColor: 'white',
+        blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+        backgroundColor: 'white'
+      },
+      customCSS: ``,
+      chatWindow: {
+        showTitle: true,
+        showAgentMessages: true,
+        title: 'Agent Bot',
+        titleAvatarSrc: 'https://avatar.iran.liara.run/public/11',
+        welcomeMessage: 'Hello! How May I Help You',
+        errorMessage: 'This is a custom error message',
+        backgroundColor: '#ffffff',
+        backgroundImage: 'enter image path or link',
+        height: 700,
+        width: 400,
+        fontSize: 16,
+        starterPrompts: [
+          "How To Train Dog?",
+        
+        ],
+        starterPromptFontSize: 15,
+        clearChatOnReload: false,
+        sourceDocsTitle: 'Sources:',
+        renderHTML: true,
+        botMessage: {
+          backgroundColor: '#f7f8ff',
+          textColor: '#303235',
+          showAvatar: true,
+          avatarSrc: 'https://avatar.iran.liara.run/public/11'
+        },
+        userMessage: {
+          backgroundColor: '#3B81F6',
+          textColor: '#ffffff',
+          showAvatar: true,
+          avatarSrc: 'https://avatar.iran.liara.run/public/11'
+        },
+        textInput: {
+          placeholder: 'Type your question',
+          backgroundColor: '#ffffff',
+          textColor: '#303235',
+          sendButtonColor: '#3B81F6',
+          maxChars: 50,
+          maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+          autoFocus: true,
+          sendMessageSound: true,
+          sendSoundLocation: 'send_message.mp3',
+          receiveMessageSound: true,
+          receiveSoundLocation: 'receive_message.mp3'
+        },
+        feedback: {
+          color: '#303235'
+        },
+        dateTimeToggle: {
+          date: true,
+          time: true
+        },
+        footer: {
+          textColor: '#303235',
+          text: 'Powered by',
+          company: 'Keval Turakhia',
+          companyLink: 'https://flowiseai.com'
+        }
+      }
+    }
+  })
+</script>
+
 </html>
